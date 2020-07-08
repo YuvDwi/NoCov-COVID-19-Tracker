@@ -1,0 +1,61 @@
+ScreenManagement:
+    MainScreen:
+    AnotherScreen:
+
+<MainScreen>:
+    name: "main"
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            canvas.before:
+                Color:
+                    rgba: 0, 0.29, 0.678, 1
+                Rectangle:
+                    size: 500, 90
+                    pos:0,530
+                Rectangle:
+                    size: 500, 232
+                    pos: 0,0
+
+        BoxLayout:
+            Label:
+                size_hint_y: 3.65
+                size_hint_x: 10
+                pos: 120, 500
+                padding: 700, 700
+                font_size: 40
+                text: '  NoCov'
+            Label:
+                size_hint_y: -0.1
+                size_hint_x: 0
+                pos: 0,0
+                font_size: 29
+                text: 'Our Policy:                                                                     '
+
+
+
+
+
+
+            Label:
+                pos: 0,-5
+                size_hint_y: -30
+                font_size: 15
+                text: '\n\n\n\n\n\n\n\n\n\n\n At NoCov we track your location using\ngeofencing technology to keep you safe\nfrom COVID-19, and track the spread of\nthe virus. Much of the data is kept locally\nor kept in a server for use\nwith an API to let us know if you are safe.\nBy agreeing to this policy, you allow\nus to access your location data\n and remotely process it.                                                                                                                                                  '
+
+
+        BoxLayout:
+            padding: 50, 350
+            Button:
+                on_release: app.root.current = "other"
+                text: "Accept & Continue"
+                font_size: 19
+                size: 200, 76
+                on_press:
+                size_hint: None, None
+                pos: 1000, 0
+                background_normal: ''
+                background_color: 1, 0.341, 0.341, 1
+
+<AnotherScreen>:
